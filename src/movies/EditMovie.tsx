@@ -45,7 +45,7 @@ export default function EditMovie(){
             history.push(`/movie/${id}`);
         }
         catch (error){
-            console.log(error);
+            setErrors(error.response.data);
         }
     }
 

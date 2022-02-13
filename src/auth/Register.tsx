@@ -24,7 +24,7 @@ export default function Register(){
             history.push('/');
         }
         catch(error){
-            console.log(error);
+            setErrors(error.response.data);
         }
     }
 

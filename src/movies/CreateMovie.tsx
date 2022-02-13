@@ -41,7 +41,7 @@ export default function CreateMovie() {
             history.push(`/movie/${response.data}`);
 
         } catch(error){
-            console.log(error);
+            setErrors(error.response.data);
         }
     }
 

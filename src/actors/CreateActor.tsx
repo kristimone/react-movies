@@ -25,7 +25,9 @@ export default function CreateActor(){
             history.push('/actors');
         }
         catch (error){
-            console.log(error);
+            if(error && error.response){
+                setErrors(error.response.data);
+            }
         }
     }
 

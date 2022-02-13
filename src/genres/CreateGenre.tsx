@@ -16,7 +16,9 @@ export default function CreateGenre() {
             history.push('/genres');
         }
         catch (error) {
-            console.log(error);
+            if(error && error.response){
+                setErrors(error.response.data);
+            }
         }
     }
 
